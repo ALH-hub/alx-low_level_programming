@@ -8,6 +8,7 @@
  * main entery point
  * Return always 0 (success)
  */
+
 int main(void)
 {
 	int n;
@@ -15,8 +16,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-
-	/* checking sign of n */
 	if (n > 0)
 		printf("%d is positive\n", n);
 	else if (n == 0)
@@ -25,5 +24,4 @@ int main(void)
 		printf("%d is negative\n", n);
 
 	return (0);
-} 
-/*end main*/
+}
