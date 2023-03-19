@@ -15,5 +15,7 @@ int main(void)
 		printf("%d", base_10);
 		base_10++;
 	}
+	printf("\n");
+
 	return (0);
 }
