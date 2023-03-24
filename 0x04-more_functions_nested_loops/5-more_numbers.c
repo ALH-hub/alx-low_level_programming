@@ -8,23 +8,19 @@
 
 void more_numbers(void)
 {
-	int num;
-	int ch;
+	int ch = 48;
 	int i = 1;
 
 	while (i <= 10)
 	{
-		num = 12596;
 		ch = 48;
-		while (ch <= 57)
+		print_numbers();
+
+		while (ch <= 52)
 		{
+			_putchar(49);
 			_putchar(ch);
 			ch++;
-		}
-		while (num <= 12596)
-		{
-			_putchar(num);
-			num++;
 		}
 		i++;
 		_putchar('\n');
