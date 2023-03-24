@@ -1,28 +1,25 @@
 #include "main.h"
 
 /**
- * more_numbers - Entry point
+ * more_numbers - Print 10 times the numbers from 0 inclusive
  * Description: print more numbers
  * Return: always 0
  */
 
 void more_numbers(void)
 {
-	int ch = 48;
-	int i = 1;
+	int x, y;
 
-	while (i <= 10)
+	for (x = 0; x < 10; x++)
 	{
-		ch = 48;
-		print_numbers();
-
-		while (ch <= 52)
+		for (y = 0; y <= 14; y++)
 		{
-			_putchar(49);
-			_putchar(ch);
-			ch++;
+			if (y > 9)
+			{
+				_putchar((y / 10) + '0');
+			}
+				_putchar((y % 10) + '0');
 		}
-		i++;
 		_putchar('\n');
 	}
 }
