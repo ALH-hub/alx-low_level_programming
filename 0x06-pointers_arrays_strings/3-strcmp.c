@@ -3,8 +3,8 @@
 /**
  * _strcmp - compares two strings
  * @s1: one of the strings to compare
- * @s2: anoter string to compare
- * Retrun: 1 if succes
+ * @s2: another string to compare
+ * Return: 0 if succes
  */
 
 int _strcmp(char *s1, char *s2)
@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] != s2[i])
 		{
-			return ( s1[i] - s2[i]);
+			return (s1[i] - s2[i]);
 		}
 		i++;
 	}
