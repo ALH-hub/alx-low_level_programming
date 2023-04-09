@@ -2,6 +2,8 @@
 
 /**
  * main - main functions with arguments
+ * @argc: argument counter
+ * @argv: array of arguments
  * Return: always 0
  */
 
