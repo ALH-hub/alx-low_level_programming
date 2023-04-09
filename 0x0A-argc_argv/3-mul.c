@@ -5,7 +5,7 @@
  * main - multiply two numbers
  * @argc: argument countrer
  * @argv: argument array
- * Return: multiplication result
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
@@ -13,7 +13,10 @@ int main(int argc, char *argv[])
 	int n1, n2, prod = 1;
 
 	if (argc <= 1)
+	{
 		printf("Error\n");
+		return (1);
+	}
 	else
 	{
 		n1 = atoi(argv[1]);
