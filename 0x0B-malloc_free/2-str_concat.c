@@ -25,26 +25,35 @@ char *str_concat(char *s1, char *s2)
 			str[i] = s1[i];
 		return (str);
 	}
-	if (s1 == NULL && s2 != NULL)
+	else
 	{
-		len = strlen(s2);
-		str = malloc(sizeof(char) * len);
-		if (str == NULL)
-			return (NULL);
-		for (j = 0; j < len; j++)
-			str[j] = s2[j];
-		return (str);
+		if (s1 == NULL && s2 != NULL)
+		{
+			len = strlen(s2);
+			str = malloc(sizeof(char) * len);
+			if (str == NULL)
+				return (NULL);
+			for (j = 0; j < len; j++)
+				str[j] = s2[j];
+			return (str);
+		}
+		else
+		{
+			if (s1 == NULL && s2 == NULL)
+				return (NULL);
+			else
+			{
+				len = strlen(s1) + strlen(s2);
+				str = malloc(sizeof(char) * len);
+				for (i = 0; i < strlen(s1); i++)
+					str[i] = s1[i];
+				for (j = i; j < len; j++)
+				{
+					str[j] = s2[k];
+					k++;
+				}
+				return (str);
+			}
+		}
 	}
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	len = strlen(s1) + strlen(s2);
-	str = malloc(sizeof(char) * len);
-	for (i = 0; i < strlen(s1); i++)
-		str[i] = s1[i];
-	for (j = i; j < len; j++)
-	{
-		str[j] = s2[k];
-		k++;
-	}
-	return (str);
 }
