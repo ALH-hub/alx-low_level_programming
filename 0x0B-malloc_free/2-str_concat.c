@@ -40,13 +40,12 @@ char *str_concat(char *s1, char *s2)
 		str[0] = '\0';
 		return (str);
 	}
-	len = strlen(s1) + strlen(s2);
-	str = malloc(sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) * ((strlen(s1) + strlen(s2)) + 1));
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < strlen(s1); i++)
 		str[i] = s1[i];
-	for (j = i; j < len; j++)
+	for (j = i; j < (strlen(s1) + strlen(s2)); j++)
 	{
 		str[j] = s2[k];
 		k++;
