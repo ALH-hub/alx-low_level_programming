@@ -42,7 +42,11 @@ char *str_concat(char *s1, char *s2)
 		else
 		{
 			if (s1 == NULL && s2 == NULL)
-				return (NULL);
+			{
+				str = malloc(sizeof(char));
+				str = '\0';
+				return (str);
+			}
 			else
 			{
 				len = strlen(s1) + strlen(s2);
