@@ -44,6 +44,8 @@ char *str_concat(char *s1, char *s2)
 			if (s1 == NULL && s2 == NULL)
 			{
 				str = malloc(sizeof(char));
+				if (str == NULL)
+					return (NULL);
 				str = '\0';
 				return (str);
 			}
