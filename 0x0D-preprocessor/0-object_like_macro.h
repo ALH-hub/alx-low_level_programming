@@ -3,7 +3,7 @@ ifndef OBJECT_LIKE_MACRO_H
 
 /*
  * File: 0-object_like_macro.h
- * Description: macro named SIZE as an abbreviation for the token 1024.
+ * Desc: macro named SIZE as an abbreviation for the token 1024.
  */
 
 #define SIZE 1024
