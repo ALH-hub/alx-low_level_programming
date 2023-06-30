@@ -19,13 +19,13 @@ list_t *add_node(list_t **head, const char *str)
 
 	dup = strdup(str);
 
-	if(dup == NULL)
+	if (dup == NULL)
 	{
 		free(new);
 		return (NULL);
 	}
 
-	while(str[len] != '\0')
+	for (len = 0; str[len];)
 		len++;
 
 	new->str = dup;
@@ -33,8 +33,5 @@ list_t *add_node(list_t **head, const char *str)
 	new->next = *head;
 	*head = new;
 
-	free(dup);
-	return(new);
+	return (new);
 }
-
-
