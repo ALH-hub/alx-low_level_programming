@@ -12,7 +12,8 @@ int _putchar(char c);
 
 size_t print_list(const list_t *h)
 {
-	int n = 0, len = 0, i = 0;
+	int len = 0, i = 0;
+	size_t n = 0;
 
 	if (h == NULL)
 		return (0);
