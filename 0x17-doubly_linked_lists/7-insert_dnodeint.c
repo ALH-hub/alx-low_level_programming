@@ -9,14 +9,14 @@
  * Return: address of new node, NULL if failed
  */
 
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, 
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 		unsigned int idx, int n)
 {
 	dlistint_t *list, *tmp;
 	unsigned int count = 0;
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 
-	if (new == NULL)
+	if (new == NULL || (*h) == NULL)
 		return (NULL);
 
 	list = *h;
