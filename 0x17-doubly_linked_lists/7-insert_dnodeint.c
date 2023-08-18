@@ -24,6 +24,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 	{
 		if (count == idx - 1)
 		{
+			if (list->next == NULL)
+				return (add_dnodeint_end(h, n));
+
 			new->n = n;
 			tmp = list->next;
 			new->next = tmp;
