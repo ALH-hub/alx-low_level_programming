@@ -35,7 +35,7 @@ int delete_dnodeint_at_index(dlistint_t **head,
 		if (list->next != NULL)
 			list->next->prev = list->prev;
 	}
-	
+
 	free(list);
-	return(1);
+	return (1);
 }
