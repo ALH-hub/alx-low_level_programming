@@ -2,23 +2,23 @@
 
 /**
  * hash_table_create - create an empty hash table
- * @size - size of the hash table
+ * @size: size of the hash table
  * Return: a pointer to the hash table
  */
 
-hash_table_t* hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
-	hash_node_t** node;
+	hash_node_t **node;
 
-	hash_table_t* hash_table = malloc(sizeof(hash_table_t));
-	
+	hash_table_t *hash_table = malloc(sizeof(hash_table_t));
+
 	if (hash_table == NULL)
 		return (NULL);
 	hash_table->size = size;
 
-	node = calloc(hash_table->size, sizeof(hash_node_t*));
-	
+	node = calloc(hash_table->size, sizeof(hash_node_t *));
+
 	if (node == NULL)
 		return (NULL);
 	for (i = 0; i < hash_table->size; i++)
@@ -27,6 +27,3 @@ hash_table_t* hash_table_create(unsigned long int size)
 
 	return (hash_table);
 }
-
-	
-
